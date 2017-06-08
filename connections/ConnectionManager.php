@@ -92,7 +92,7 @@ class ConnectionManager
 	 */
 	public function getDefault()
 	{
-		return $this->byId( "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com" );
+		return $this->byId( "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com" );
 	}
 
 	/**
@@ -101,7 +101,7 @@ class ConnectionManager
 	 */	
 	public function getForLogin()
 	{
-		return $this->byId( "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com" );
+		return $this->byId( "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com" );
 	}
 	
 	/**
@@ -265,16 +265,16 @@ class ConnectionManager
 		
 		$data = array();
 		$data["dbType"] = 4;
-		$data["connId"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
-		$data["connName"] = "d5lsv7vd10gajh at ec2-54-225-68-71.compute-1.amazonaws.com";
+		$data["connId"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$data["connName"] = "dcpm3cl5oquqpv at ec2-54-225-68-71.compute-1.amazonaws.com";
 		$data["connStringType"] = "postgre";
-		$data["connectionString"] = "postgre;ec2-54-225-68-71.compute-1.amazonaws.com;kscjdjzhofqmng;bc0361a94affee5762777c86f4a6be9fdee10b3a9600faa3ccb4d89b1f735982;;d5lsv7vd10gajh;;1;"; //currently unused
+		$data["connectionString"] = "postgre;ec2-54-225-68-71.compute-1.amazonaws.com;mvawexwfyzsfaw;2f79adb3f4e25ee2349f803479e6f072a75643170ba5590a78c083895efa9491;;dcpm3cl5oquqpv;;1;"; //currently unused
 		
-		$this->_connectionsIdByName["d5lsv7vd10gajh at ec2-54-225-68-71.compute-1.amazonaws.com"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$this->_connectionsIdByName["dcpm3cl5oquqpv at ec2-54-225-68-71.compute-1.amazonaws.com"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
 		
 		$data["connInfo"] = array();
-		$data["ODBCUID"] = "kscjdjzhofqmng";
-		$data["ODBCPWD"] = "bc0361a94affee5762777c86f4a6be9fdee10b3a9600faa3ccb4d89b1f735982";
+		$data["ODBCUID"] = "mvawexwfyzsfaw";
+		$data["ODBCPWD"] = "2f79adb3f4e25ee2349f803479e6f072a75643170ba5590a78c083895efa9491";
 		$data["leftWrap"] = "\"";
 		$data["rightWrap"] = "\"";
 		
@@ -282,20 +282,20 @@ class ConnectionManager
 		$data["useServerMapPath"] = 1; //currently unused
 		
 		$data["connInfo"][0] = "ec2-54-225-68-71.compute-1.amazonaws.com";
-		$data["connInfo"][1] = "kscjdjzhofqmng";
-		$data["connInfo"][2] = "bc0361a94affee5762777c86f4a6be9fdee10b3a9600faa3ccb4d89b1f735982";
+		$data["connInfo"][1] = "mvawexwfyzsfaw";
+		$data["connInfo"][2] = "2f79adb3f4e25ee2349f803479e6f072a75643170ba5590a78c083895efa9491";
 		$data["connInfo"][3] = "";
-		$data["connInfo"][4] = "d5lsv7vd10gajh";
+		$data["connInfo"][4] = "dcpm3cl5oquqpv";
 		$data["connInfo"][5] = ""; //currently unused
 		$data["connInfo"][6] = "1"; //currently unused
-		$data["ODBCString"] = "Driver={postgresQL Unicode};Server=ec2-54-225-68-71.compute-1.amazonaws.com;Database=d5lsv7vd10gajh;Uid=kscjdjzhofqmng;Pwd=bc0361a94affee5762777c86f4a6be9fdee10b3a9600faa3ccb4d89b1f735982;";
+		$data["ODBCString"] = "Driver={PostgreSQL Unicode};Server=ec2-54-225-68-71.compute-1.amazonaws.com;Database=dcpm3cl5oquqpv;Uid=mvawexwfyzsfaw;Pwd=2f79adb3f4e25ee2349f803479e6f072a75643170ba5590a78c083895efa9491;";
 		// encription set
 		$data["EncryptInfo"] = array();
 		$data["EncryptInfo"]["mode"] = 0;
 		$data["EncryptInfo"]["alg"]  = 128;
 		$data["EncryptInfo"]["key"]  = "";
 
-		$connectionsData["d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com"] = $data;
+		$connectionsData["dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com"] = $data;
 		$this->_connectionsData = $connectionsData;
 	}
 	
@@ -306,16 +306,16 @@ class ConnectionManager
 	protected function _setTablesConnectionIds()
 	{
 		$connectionsIds = array();
-		$connectionsIds["public.autor"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
-		$connectionsIds["public.editorial"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
-		$connectionsIds["public.ejemplares"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
-		$connectionsIds["public.estado"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
-		$connectionsIds["public.idioma"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
-		$connectionsIds["public.libro"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
-		$connectionsIds["public.lector"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
-		$connectionsIds["public.prestamo"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
-		$connectionsIds["public.tema"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
-		$connectionsIds["public.usuario"] = "d5lsv7vd10gajh_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$connectionsIds["public.autor"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$connectionsIds["public.editorial"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$connectionsIds["public.ejemplares"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$connectionsIds["public.estado"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$connectionsIds["public.idioma"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$connectionsIds["public.libro"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$connectionsIds["public.lector"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$connectionsIds["public.prestamo"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$connectionsIds["public.tema"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
+		$connectionsIds["public.usuario"] = "dcpm3cl5oquqpv_at_ec2-54-225-68-71.compute-1.amazonaws.com";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	
