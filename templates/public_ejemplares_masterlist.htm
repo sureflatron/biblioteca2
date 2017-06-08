@@ -1,0 +1,60 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">Volver a {$backtomasterlink_caption}</a><span>{$pagetitlelabel public_ejemplares masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=idejemplares]:before {
+		content: "{$label public_ejemplares idejemplares}";
+	}
+	.bs-gridcell[data-field=numero_ejemplar]:before {
+		content: "{$label public_ejemplares numero_ejemplar}";
+	}
+	.bs-gridcell[data-field=estado]:before {
+		content: "{$label public_ejemplares estado}";
+	}
+	.bs-gridcell[data-field=idlibro]:before {
+		content: "{$label public_ejemplares idlibro}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$idejemplares_class}">{$label public_ejemplares idejemplares}</th>
+			<th class="{$numero_ejemplar_class}">{$label public_ejemplares numero_ejemplar}</th>
+			<th class="{$estado_class}">{$label public_ejemplares estado}</th>
+			<th class="{$idlibro_class}">{$label public_ejemplares idlibro}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$idejemplares_class} bs-gridcell" data-field=idejemplares>{$idejemplares_mastervalue}</td>
+			<td class="{$numero_ejemplar_class} bs-gridcell" data-field=numero_ejemplar>{$numero_ejemplar_mastervalue}</td>
+			<td class="{$estado_class} bs-gridcell" data-field=estado>{$estado_mastervalue}</td>
+			<td class="{$idlibro_class} bs-gridcell" data-field=idlibro>{$idlibro_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

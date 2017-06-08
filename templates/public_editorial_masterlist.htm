@@ -1,0 +1,50 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">Volver a {$backtomasterlink_caption}</a><span>{$pagetitlelabel public_editorial masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=ideditorial]:before {
+		content: "{$label public_editorial ideditorial}";
+	}
+	.bs-gridcell[data-field=editorial]:before {
+		content: "{$label public_editorial editorial}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$ideditorial_class}">{$label public_editorial ideditorial}</th>
+			<th class="{$editorial_class}">{$label public_editorial editorial}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$ideditorial_class} bs-gridcell" data-field=ideditorial>{$ideditorial_mastervalue}</td>
+			<td class="{$editorial_class} bs-gridcell" data-field=editorial>{$editorial_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>
