@@ -1,0 +1,306 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel public_prestamo edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN fecha_prestamo_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fecha_prestamo}" data-fieldname="fecha_prestamo" data-signal-error-for="fecha_prestamo{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fecha_prestamo}">
+		{BEGIN fecha_prestamo_label}{$label public_prestamo fecha_prestamo}{END fecha_prestamo_label}
+	</label>
+	<div class="col-md-6" >
+		{$fecha_prestamo_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fecha_prestamo">
+		<div class="text-muted" >
+		{$tooltip public_prestamo fecha_prestamo}
+		</div>
+	</div>
+</div>
+</div>
+{END fecha_prestamo_fieldblock}
+
+			{BEGIN fecha_devolucion_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fecha_devolucion}" data-fieldname="fecha_devolucion" data-signal-error-for="fecha_devolucion{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fecha_devolucion}">
+		{BEGIN fecha_devolucion_label}{$label public_prestamo fecha_devolucion}{END fecha_devolucion_label}
+	</label>
+	<div class="col-md-6" >
+		{$fecha_devolucion_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fecha_devolucion">
+		<div class="text-muted" >
+		{$tooltip public_prestamo fecha_devolucion}
+		</div>
+	</div>
+</div>
+</div>
+{END fecha_devolucion_fieldblock}
+
+			{BEGIN diasprestamo_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_diasprestamo}" data-fieldname="diasprestamo" data-signal-error-for="diasprestamo{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_diasprestamo}">
+		{BEGIN diasprestamo_label}{$label public_prestamo diasprestamo}{END diasprestamo_label}
+	</label>
+	<div class="col-md-6" >
+		{$diasprestamo_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="diasprestamo">
+		<div class="text-muted" >
+		{$tooltip public_prestamo diasprestamo}
+		</div>
+	</div>
+</div>
+</div>
+{END diasprestamo_fieldblock}
+
+			{BEGIN idejemplar_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_idejemplar}" data-fieldname="idejemplar" data-signal-error-for="idejemplar{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_idejemplar}">
+		{BEGIN idejemplar_label}{$label public_prestamo idejemplar}{END idejemplar_label}
+	</label>
+	<div class="col-md-6" >
+		{$idejemplar_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="idejemplar">
+		<div class="text-muted" >
+		{$tooltip public_prestamo idejemplar}
+		</div>
+	</div>
+</div>
+</div>
+{END idejemplar_fieldblock}
+
+			{BEGIN idlector_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_idlector}" data-fieldname="idlector" data-signal-error-for="idlector{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_idlector}">
+		{BEGIN idlector_label}{$label public_prestamo idlector}{END idlector_label}
+	</label>
+	<div class="col-md-6" >
+		{$idlector_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="idlector">
+		<div class="text-muted" >
+		{$tooltip public_prestamo idlector}
+		</div>
+	</div>
+</div>
+</div>
+{END idlector_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Guardar</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>Volver a la lista</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>Cancelar</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>Reiniciar</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>Ver</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+{BEGIN pdflink_block}
+<a href="#" class="pdflink btn btn-default" {$pdflink_attrs}>Vista PDF</a>
+{END pdflink_block}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel public_libro print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN idlibro_fieldheadercolumn}
+			<th class="{$idlibro_class}" {$idlibro_style}  data-field="idlibro">
+				{$label public_libro idlibro}
+			</th>
+			{END idlibro_fieldheadercolumn}
+			{BEGIN tituulo_fieldheadercolumn}
+			<th class="{$tituulo_class}" {$tituulo_style}  data-field="tituulo">
+				{$label public_libro tituulo}
+			</th>
+			{END tituulo_fieldheadercolumn}
+			{BEGIN subtitulo_fieldheadercolumn}
+			<th class="{$subtitulo_class}" {$subtitulo_style}  data-field="subtitulo">
+				{$label public_libro subtitulo}
+			</th>
+			{END subtitulo_fieldheadercolumn}
+			{BEGIN edicion_fieldheadercolumn}
+			<th class="{$edicion_class}" {$edicion_style}  data-field="edicion">
+				{$label public_libro edicion}
+			</th>
+			{END edicion_fieldheadercolumn}
+			{BEGIN paginas_fieldheadercolumn}
+			<th class="{$paginas_class}" {$paginas_style}  data-field="paginas">
+				{$label public_libro paginas}
+			</th>
+			{END paginas_fieldheadercolumn}
+			{BEGIN cod_fieldheadercolumn}
+			<th class="{$cod_class}" {$cod_style}  data-field="cod">
+				{$label public_libro cod}
+			</th>
+			{END cod_fieldheadercolumn}
+			{BEGIN ideditorial_fieldheadercolumn}
+			<th class="{$ideditorial_class}" {$ideditorial_style}  data-field="ideditorial">
+				{$label public_libro ideditorial}
+			</th>
+			{END ideditorial_fieldheadercolumn}
+			{BEGIN idautor_fieldheadercolumn}
+			<th class="{$idautor_class}" {$idautor_style}  data-field="idautor">
+				{$label public_libro idautor}
+			</th>
+			{END idautor_fieldheadercolumn}
+			{BEGIN idtema_fieldheadercolumn}
+			<th class="{$idtema_class}" {$idtema_style}  data-field="idtema">
+				{$label public_libro idtema}
+			</th>
+			{END idtema_fieldheadercolumn}
+			{BEGIN ididioma_fieldheadercolumn}
+			<th class="{$ididioma_class}" {$ididioma_style}  data-field="ididioma">
+				{$label public_libro ididioma}
+			</th>
+			{END ididioma_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN idlibro_fieldcolumn}
+			<td  class="{$idlibro_class}" {$idlibro_style} {$recordattrs}>
+				{$idlibro_value}
+			</td>
+			{END idlibro_fieldcolumn}
+			{BEGIN tituulo_fieldcolumn}
+			<td  class="{$tituulo_class}" {$tituulo_style} {$recordattrs}>
+				{$tituulo_value}
+			</td>
+			{END tituulo_fieldcolumn}
+			{BEGIN subtitulo_fieldcolumn}
+			<td  class="{$subtitulo_class}" {$subtitulo_style} {$recordattrs}>
+				{$subtitulo_value}
+			</td>
+			{END subtitulo_fieldcolumn}
+			{BEGIN edicion_fieldcolumn}
+			<td  class="{$edicion_class}" {$edicion_style} {$recordattrs}>
+				{$edicion_value}
+			</td>
+			{END edicion_fieldcolumn}
+			{BEGIN paginas_fieldcolumn}
+			<td  class="{$paginas_class}" {$paginas_style} {$recordattrs}>
+				{$paginas_value}
+			</td>
+			{END paginas_fieldcolumn}
+			{BEGIN cod_fieldcolumn}
+			<td  class="{$cod_class}" {$cod_style} {$recordattrs}>
+				{$cod_value}
+			</td>
+			{END cod_fieldcolumn}
+			{BEGIN ideditorial_fieldcolumn}
+			<td  class="{$ideditorial_class}" {$ideditorial_style} {$recordattrs}>
+				{$ideditorial_value}
+			</td>
+			{END ideditorial_fieldcolumn}
+			{BEGIN idautor_fieldcolumn}
+			<td  class="{$idautor_class}" {$idautor_style} {$recordattrs}>
+				{$idautor_value}
+			</td>
+			{END idautor_fieldcolumn}
+			{BEGIN idtema_fieldcolumn}
+			<td  class="{$idtema_class}" {$idtema_style} {$recordattrs}>
+				{$idtema_value}
+			</td>
+			{END idtema_fieldcolumn}
+			{BEGIN ididioma_fieldcolumn}
+			<td  class="{$ididioma_class}" {$ididioma_style} {$recordattrs}>
+				{$ididioma_value}
+			</td>
+			{END ididioma_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="11">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

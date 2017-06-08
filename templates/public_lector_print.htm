@@ -1,0 +1,200 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+{BEGIN pdflink_block}
+<a href="#" class="pdflink btn btn-default" {$pdflink_attrs}>Vista PDF</a>
+{END pdflink_block}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel public_lector print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN idlector_fieldheadercolumn}
+			<th class="{$idlector_class}" {$idlector_style}  data-field="idlector">
+				{$label public_lector idlector}
+			</th>
+			{END idlector_fieldheadercolumn}
+			{BEGIN nombrelector_fieldheadercolumn}
+			<th class="{$nombrelector_class}" {$nombrelector_style}  data-field="nombrelector">
+				{$label public_lector nombrelector}
+			</th>
+			{END nombrelector_fieldheadercolumn}
+			{BEGIN direcciom_fieldheadercolumn}
+			<th class="{$direcciom_class}" {$direcciom_style}  data-field="direcciom">
+				{$label public_lector direcciom}
+			</th>
+			{END direcciom_fieldheadercolumn}
+			{BEGIN telefono_fieldheadercolumn}
+			<th class="{$telefono_class}" {$telefono_style}  data-field="telefono">
+				{$label public_lector telefono}
+			</th>
+			{END telefono_fieldheadercolumn}
+			{BEGIN email_fieldheadercolumn}
+			<th class="{$email_class}" {$email_style}  data-field="email">
+				{$label public_lector email}
+			</th>
+			{END email_fieldheadercolumn}
+			{BEGIN fechaingreso_fieldheadercolumn}
+			<th class="{$fechaingreso_class}" {$fechaingreso_style}  data-field="fechaingreso">
+				{$label public_lector fechaingreso}
+			</th>
+			{END fechaingreso_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN idlector_fieldcolumn}
+			<td  class="{$idlector_class}" {$idlector_style} {$recordattrs}>
+				{$idlector_value}
+			</td>
+			{END idlector_fieldcolumn}
+			{BEGIN nombrelector_fieldcolumn}
+			<td  class="{$nombrelector_class}" {$nombrelector_style} {$recordattrs}>
+				{$nombrelector_value}
+			</td>
+			{END nombrelector_fieldcolumn}
+			{BEGIN direcciom_fieldcolumn}
+			<td  class="{$direcciom_class}" {$direcciom_style} {$recordattrs}>
+				{$direcciom_value}
+			</td>
+			{END direcciom_fieldcolumn}
+			{BEGIN telefono_fieldcolumn}
+			<td  class="{$telefono_class}" {$telefono_style} {$recordattrs}>
+				{$telefono_value}
+			</td>
+			{END telefono_fieldcolumn}
+			{BEGIN email_fieldcolumn}
+			<td  class="{$email_class}" {$email_style} {$recordattrs}>
+				{$email_value}
+			</td>
+			{END email_fieldcolumn}
+			{BEGIN fechaingreso_fieldcolumn}
+			<td  class="{$fechaingreso_class}" {$fechaingreso_style} {$recordattrs}>
+				{$fechaingreso_value}
+			</td>
+			{END fechaingreso_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="7">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
