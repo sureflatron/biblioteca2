@@ -192,7 +192,7 @@
 	 
 		<span class="dropdown">
 			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon-user"></span>	Carlos</button>
+				<span class="glyphicon glyphicon-user"></span>	Administrador</button>
 			<ul class="dropdown-menu">
 		
 				<li><a href="#" id="logoutButton1">Desconectarse</a></li>
