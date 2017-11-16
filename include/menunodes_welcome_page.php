@@ -7,7 +7,7 @@ function getMenuNodes_welcome_page($menuNodesObject)
 
 	$menuNode = array();
 	$menuNode["id"] = "1";
-	$menuNode["name"] = "bibliotecaheroku";
+	$menuNode["name"] = "Biblioteca Virtual";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
@@ -24,7 +24,7 @@ function getMenuNodes_welcome_page($menuNodesObject)
 
 			$menuNode["color"] = "";
 	
-	$menuNode["title"] = "bibliotecaheroku";
+	$menuNode["title"] = "Biblioteca Virtual";
 
 
 
@@ -216,7 +216,7 @@ function getMenuNodes_welcome_page($menuNodesObject)
 
 			$menuNode["color"] = "";
 	
-	$menuNode["title"] = "Prestamo";
+	$menuNode["title"] = "Discovery";
 
 
 
@@ -265,6 +265,30 @@ function getMenuNodes_welcome_page($menuNodesObject)
 			$menuNode["color"] = "";
 	
 	$menuNode["title"] = "Usuario";
+
+
+
+	$menuNodesObject->menuNodes["welcome_page"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "12";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "public.usuario";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "1";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = "List";//
+	$menuNode["openType"] = "None";
+	
+	$menuNode["icon"] = "glyphicon-sunglasses";
+	$menuNode["iconType"] = "2";
+
+			$menuNode["color"] = "";
+	
+	$menuNode["title"] = "Discovery";
 
 
 

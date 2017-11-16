@@ -463,7 +463,7 @@ $globalSettings["LandingPage"] = "";
 $globalSettings["LandingURL"] = "";
 
 $globalSettings["ProjectLogo"] = array();
-$globalSettings["ProjectLogo"]["Spanish"] = "bibliotecaheroku";
+$globalSettings["ProjectLogo"]["Spanish"] = "Biblioteca Virtual";
 
 $globalSettings["createLoginPage"] = true;
 
@@ -586,6 +586,8 @@ $tableCaptions["Spanish"]["public_lector"] = "Lector";
 $tableCaptions["Spanish"]["public_prestamo"] = "Prestamo";
 $tableCaptions["Spanish"]["public_tema"] = "Tema";
 $tableCaptions["Spanish"]["public_usuario"] = "Usuario";
+$tableCaptions["Spanish"]["public_discovery"] = "Discovery";
+$tableCaptions["Spanish"]["public_chatboot"] = "ChatBoot";
 $tableCaptions["Spanish"][""] = "";
 $tableCaptions[""] = array();
 $tableCaptions[""][""] = "";
